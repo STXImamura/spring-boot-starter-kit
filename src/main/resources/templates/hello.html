@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="jp" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Hello</title>
+<style>
+    /* AI:コンテンツの幅を1024とし、bodyの中央に寄せる */
+    body {
+        width: 1024px;
+        margin: 0 auto;
+    }
+    /* AI:div内の要素を中央に寄せる */
+    div {
+        text-align: center;
+    }
+
+    /* AI:オブジェクト間の余白を10pxにする */
+    div > * {
+        margin: 10px;
+    }
+
+    /* コンテンツの上の余白を20pxにする */
+    body > *:first-child {
+        margin-top: 20px;
+    }
+
+    .font-size-18 {
+        font-size: 18px;
+    }
+
+    /* AI:クールなボタンを作って欲しい */
+    .cool-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 18px;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background: #000;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .cool-button:hover {
+        background: #ff6347;
+        transform: scale(1.05);
+    }
+    
+    /* AI:上記のキャンセルボタン版を作って欲しい */
+    .cancel-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 18px;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background: #ff0000;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 5px 15px rgba(255,0,0,0.3);
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .cancel-button:hover {
+        background: #800000; /* ホバー時は深赤色 */
+        transform: scale(1.05);
+    }
+</style>
+
+<script lang="javascript">
+    // メッセージをHello Worldにリセットする
+    window.onload = function() {
+        document.getElementById("reset").addEventListener("click", function() {
+            document.getElementById("message").value = "Hello World";
+        });
+    }
+</script>
+
+</head>
+<body>
+    <form method="post" action="/hello">
+        <div>
+            <input id="message" name="message" type="text" class="font-size-18" th:value="${message}"></input><br/>
+            <button id="submit" type="submit" class="cool-button">Update</button>
+            <button id="reset"  type="button" class="cancel-button">Reset</button>
+        </div>
+    </form>
+</body>
+</html>

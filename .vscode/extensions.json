@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "ms-ceintl.vscode-language-pack-ja",
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-java-debug",
+        "vmware.vscode-boot-dev-pack",
+        "vscjava.vscode-gradle",
+        "dbaeumer.vscode-eslint",
+        "intellsmi.comment-translate",
+        "benshabatnoam.google-translate-ext"
+    ]
+}
