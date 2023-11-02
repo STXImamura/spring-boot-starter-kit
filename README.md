@@ -123,7 +123,7 @@
 
 このあたりも対応したいですね。
 
-[ ] sass対応
-[ ] vue対応
-[ ] gulp対応
-[ ] TypeScriptの単体テスト
+- [ ] sass対応
+- [ ] vue対応
+- [ ] gulp対応
+- [ ] TypeScriptの単体テスト
