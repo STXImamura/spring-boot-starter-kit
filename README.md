@@ -6,6 +6,7 @@
 - spring boot 
 - データベース(SQLiteを使用、サーバーレスのデータベースエンジン)
 - テンプレートエンジン(thymeleaf)
+- TypeScript
 - 単体テスト
 - もちろんHTML、CSS、JavaScriptも
 
@@ -15,6 +16,9 @@
 - [VSCode拡張機能](#vscode)
 - [実行方法](#howtorun)
 - [確認方法](#confirm)
+- [単体テスト](#test)
+- [ディレクトリ構成について](#dir)
+- [TODO](#todo)
 
 
 ## インストール <a name="install"></a>
@@ -34,6 +38,14 @@
     開発者にとって効率的なコーディング環境を提供するため、幅広いプログラミング言語やプロジェクトの開発に利用されています。
 
     https://code.visualstudio.com/download
+
+- npm
+
+    JavaScriptベースのプロジェクトで使用されるパッケージ管理システムです。npmを使用することで、他の開発者が共有しているJavaScriptライブラリやツールをプロジェクトに追加することができます。
+
+    https://nodejs.org/en/download
+
+    ※ 64bit版 Windows Installerを選択
 
 - A5:SQL Mk-2
     A5:SQL Mk-2は複雑化するデータベース開発を支援するために開発されたフリーのSQLクライアントです。  
@@ -78,22 +90,40 @@
 
 ## 実行方法  <a name="howtorun"></a>
 
-アクティビティサイドバーのSpring Boot Dashboardを選択してサイドバーを切り替えます。  
-切り替えたらAPPS > demo からDebugボタンで実行できます。
+アクティビティサイドバーGradleを選択してサイドバーを切り替えます。  
+切り替えたらdemo > Tasks > application > bootRun から DebugTask を実行します。
 
 ![実行方法](images/springboot_debug.png)
-
 
 ## 確認方法  <a name="confirm"></a>
 
 ブラウザで http://localhost:8080/hello を開いて、「Hello World!」と表示されれば成功です。
 
-## 単体テスト
+## 単体テスト <a name="test"></a>
 
 単体テストは、テストクラスを開いてチェックアイコンをクリックするか、右クリックから「テストを実行する」を選択して実行できます。
 
 ![単体テスト](images/springboot_test.png)
 
-## その他
+## ディレクトリ構成について <a name="dir"></a>
 
-このプロジェクトはEclipseからも開けるようになっています。
+| ディレクトリ             | 説明                             |
+|--------------------------|----------------------------------|
+| build                    | src配下のbuild結果を格納する場所 |
+| src                      | ルート                           |
+| src/main                 | 各種ソースの格納先               |
+| src/main/java            | Javaソースコード                 |
+| src/main/resources       | 様々なリソースを置く場所         |
+| src/main/resources/static| 静的コンテンツ<br/> 画像ファイル/CSS/JavaScriptなどはここに配置します。  |
+| src/main/resources/templates| thymeleafのテンプレート       |
+| src/ts                   | TypeScriptのソースコード<br/>BuildするとJavaScriptにコンパイルされ、staticディレクトリに配置されます。 |
+| src/test                 | テストコードの格納先             |
+
+## TODO <a name="todo"></a>
+
+このあたりも対応したいですね。
+
+[ ] sass対応
+[ ] vue対応
+[ ] gulp対応
+[ ] TypeScriptの単体テスト

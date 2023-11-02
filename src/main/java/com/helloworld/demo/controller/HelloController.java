@@ -24,8 +24,6 @@ public class HelloController {
   @GetMapping(value = "/hello")
   public String get(DemoForm form, Model model) throws Exception {
 
-    System.out.println("debug");
-
     Demo demo = demoService.get(1);
 
     model.addAttribute("message", demo.getMsg());

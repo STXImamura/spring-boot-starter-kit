@@ -74,9 +74,7 @@
 <script lang="javascript">
     // メッセージをHello Worldにリセットする
     window.onload = function() {
-        document.getElementById("reset").addEventListener("click", function() {
-            document.getElementById("message").value = "Hello World";
-        });
+        init();
     }
 </script>
 
@@ -89,5 +87,7 @@
             <button id="reset"  type="button" class="cancel-button">Reset</button>
         </div>
     </form>
+
+    <script src="/js/hello.js"></script>
 </body>
 </html>

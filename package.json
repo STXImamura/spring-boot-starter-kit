@@ -1,0 +1,22 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "てっとり早くSpring Bootを学習したい人のための環境構築済みのプロジェクトです。",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --build tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/STXImamura/spring-boot-starter-kit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/STXImamura/spring-boot-starter-kit/issues"
+  },
+  "homepage": "https://github.com/STXImamura/spring-boot-starter-kit#readme",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
