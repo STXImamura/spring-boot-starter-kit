@@ -18,6 +18,8 @@
 - [確認方法](#confirm)
 - [単体テスト](#test)
 - [ディレクトリ構成について](#dir)
+- [その他](#other)
+  - TypeScriptの自動コンパイル
 - [TODO](#todo)
 
 
@@ -44,6 +46,13 @@
     JavaScriptベースのプロジェクトで使用されるパッケージ管理システムです。npmを使用することで、他の開発者が共有しているJavaScriptライブラリやツールをプロジェクトに追加することができます。
 
     https://nodejs.org/en/download
+
+    npmをインストールしたら、コマンドプロンプトを開いて以下のコマンドを実行してください。  
+    TypeScriptをインストールします。
+
+    ```bash
+    npm install -g typescript
+    ```
 
     ※ 64bit版 Windows Installerを選択
 
@@ -90,7 +99,7 @@
 
 ## 実行方法  <a name="howtorun"></a>
 
-アクティビティサイドバーGradleを選択してサイドバーを切り替えます。  
+アクティビティバーからGradleを選択してサイドバーを切り替えます。  
 切り替えたらdemo > Tasks > application > bootRun から DebugTask を実行します。
 
 ![実行方法](images/springboot_debug.png)
@@ -101,7 +110,8 @@
 
 ## 単体テスト <a name="test"></a>
 
-単体テストは、テストクラスを開いてチェックアイコンをクリックするか、右クリックから「テストを実行する」を選択して実行できます。
+アクティビティバーからテストを選択してサイドバーを切り替えます。    
+切り替えたら、ツリー構成から任意のテストを実行できます。
 
 ![単体テスト](images/springboot_test.png)
 
@@ -118,6 +128,13 @@
 | src/main/resources/templates| thymeleafのテンプレート       |
 | src/ts                   | TypeScriptのソースコード<br/>BuildするとJavaScriptにコンパイルされ、staticディレクトリに配置されます。 |
 | src/test                 | テストコードの格納先             |
+
+## その他 <a name="other"></a>
+
+### TypeScriptの自動コンパイル
+
+自動コンパイルのタスクを実行すると、TypeScriptの修正の度にサーバーを再起動しなくて済むようになります。  
+`Ctrl+Shift+P`でコマンドパレットを開き、`Tasks: Run Task`を選択して、`TypeScript Watch`を選択します。
 
 ## TODO <a name="todo"></a>
 

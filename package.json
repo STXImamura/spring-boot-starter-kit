@@ -4,7 +4,8 @@
   "description": "てっとり早くSpring Bootを学習したい人のための環境構築済みのプロジェクトです。",
   "main": "index.js",
   "scripts": {
-    "build": "tsc --build tsconfig.json"
+    "build": "tsc --build tsconfig.json",
+		"watch": "tsc -watch -p ./"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/STXImamura/spring-boot-starter-kit#readme",
   "devDependencies": {
+    "@types/node": "^20.8.10",
     "typescript": "^5.2.2"
   }
 }
