@@ -7,6 +7,7 @@
 - データベース(SQLiteを使用、サーバーレスのデータベースエンジン)
 - テンプレートエンジン(thymeleaf)
 - TypeScript
+- BootStrap
 - 単体テスト
 - もちろんHTML、CSS、JavaScriptも
 
@@ -17,7 +18,7 @@
 - [実行方法](#howtorun)
 - [確認方法](#confirm)
 - [単体テスト](#test)
-- [ディレクトリ構成について](#dir)
+- [ディレクトリ/ファイル構成について](#dir)
 - [その他](#other)
   - TypeScriptの自動コンパイル
 - [TODO](#todo)
@@ -115,19 +116,24 @@
 
 ![単体テスト](images/springboot_test.png)
 
-## ディレクトリ構成について <a name="dir"></a>
+## ディレクトリ/ファイル構成について <a name="dir"></a>
 
-| ディレクトリ             | 説明                             |
-|--------------------------|----------------------------------|
-| build                    | src配下のbuild結果を格納する場所 |
-| src                      | ルート                           |
-| src/main                 | 各種ソースの格納先               |
-| src/main/java            | Javaソースコード                 |
-| src/main/resources       | 様々なリソースを置く場所         |
+| ディレクトリ             | 説明                              |
+|--------------------------|-----------------------------------|
+| build                    | src配下のbuild結果を格納する場所  |
+| src                      | ルート                            |
+| src/main                 | 各種ソースの格納先                |
+| src/main/java            | Javaソースコード                  |
+| src/main/resources       | 様々なリソースを置く場所          |
 | src/main/resources/static| 静的コンテンツ<br/> 画像ファイル/CSS/JavaScriptなどはここに配置します。  |
-| src/main/resources/templates| thymeleafのテンプレート       |
+| src/main/resources/templates| thymeleafのテンプレート        |
 | src/ts                   | TypeScriptのソースコード<br/>BuildするとJavaScriptにコンパイルされ、staticディレクトリに配置されます。 |
-| src/test                 | テストコードの格納先             |
+| src/test                 | テストコードの格納先              |
+| src/inex.js              | webpackがまとめるファイル         |
+| build.gradle             | gradleのbuildスクリプト           |
+| package.json             | node.jsのプロジェクト設定ファイル |
+| tsconfig.json            | TypeScriptの設定ファイル          |
+| webpack.config.js        | webpackの定義ファイル             |
 
 ## その他 <a name="other"></a>
 
@@ -135,6 +141,11 @@
 
 自動コンパイルのタスクを実行すると、TypeScriptの修正の度にサーバーを再起動しなくて済むようになります。  
 `Ctrl+Shift+P`でコマンドパレットを開き、`Tasks: Run Task`を選択して、`TypeScript Watch`を選択します。
+
+### BootStrap ドキュメント
+
+BootStrapのドキュメントは以下を参照してください。  
+[getbootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introduction/)
 
 ## TODO <a name="todo"></a>
 

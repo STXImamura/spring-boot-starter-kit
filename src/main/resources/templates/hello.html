@@ -1,93 +1,56 @@
-<!DOCTYPE html>
-<html lang="jp" xmlns:th="http://www.thymeleaf.org">
+<!doctype html>
+<html lang="ja">
+
 <head>
-<meta charset="UTF-8">
-<title>Hello</title>
-<style>
-    /* AI:コンテンツの幅を1024とし、bodyの中央に寄せる */
-    body {
-        width: 1024px;
-        margin: 0 auto;
-    }
-    /* AI:div内の要素を中央に寄せる */
-    div {
-        text-align: center;
-    }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
 
-    /* AI:オブジェクト間の余白を10pxにする */
-    div > * {
-        margin: 10px;
-    }
-
-    /* コンテンツの上の余白を20pxにする */
-    body > *:first-child {
-        margin-top: 20px;
-    }
-
-    .font-size-18 {
-        font-size: 18px;
-    }
-
-    /* AI:クールなボタンを作って欲しい */
-    .cool-button {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 18px;
-        color: #fff;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        background: #000;
-        border: none;
-        border-radius: 5px;
-        box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
-        transition: all 0.2s ease-in-out;
-    }
-    
-    .cool-button:hover {
-        background: #ff6347;
-        transform: scale(1.05);
-    }
-    
-    /* AI:上記のキャンセルボタン版を作って欲しい */
-    .cancel-button {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 18px;
-        color: #fff;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        background: #ff0000;
-        border: none;
-        border-radius: 5px;
-        box-shadow: 0px 5px 15px rgba(255,0,0,0.3);
-        transition: all 0.2s ease-in-out;
-    }
-    
-    .cancel-button:hover {
-        background: #800000; /* ホバー時は深赤色 */
-        transform: scale(1.05);
-    }
-</style>
-
-<script lang="javascript">
-    // メッセージをHello Worldにリセットする
-    window.onload = function() {
-        init();
-    }
-</script>
-
+    <script lang="javascript">
+        // メッセージをHello Worldにリセットする
+        window.onload = function () {
+            init();
+        }
+    </script>
 </head>
-<body>
-    <form method="post" action="/hello">
-        <div>
-            <input id="message" name="message" type="text" class="font-size-18" th:value="${message}"></input><br/>
-            <button id="submit" type="submit" class="cool-button">Update</button>
-            <button id="reset"  type="button" class="cancel-button">Reset</button>
-        </div>
-    </form>
 
-    <script src="/js/hello.js"></script>
+<body>
+    <div class="container text-center">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Spring Boot Starter Kit</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <form method="post" action="/hello">
+            <div class="row">
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">input</span>
+                        <input id="message" name="message" type="text" class="form-control" placeholder="message" aria-label="Username"
+                            aria-describedby="basic-addon1" th:value="${message}">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button id="submit" type="submit" class="btn btn-primary">Update</button>
+                </div>
+                <div class="col">
+                    <button id="reset"  type="button" class="btn btn-warning">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="dist/main.js" crossorigin="anonymous"></script>
+    <script src="js/hello.js"></script>
 </body>
+
 </html>

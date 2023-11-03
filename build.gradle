@@ -32,6 +32,7 @@ repositories {
 
 classes.dependsOn npm_install
 classes.dependsOn npm_run_build
+classes.dependsOn npm_run_webpack
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
