@@ -7,6 +7,7 @@
         "vscjava.vscode-gradle",
         "dbaeumer.vscode-eslint",
         "intellsmi.comment-translate",
-        "benshabatnoam.google-translate-ext"
+        "benshabatnoam.google-translate-ext",
+        "esbenp.prettier-vscode"
     ]
 }

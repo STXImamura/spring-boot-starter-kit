@@ -4,12 +4,15 @@
 
 以下の機能が学べます
 - spring boot 
-- データベース(SQLiteを使用、サーバーレスのデータベースエンジン)
+- 単体テスト(Java)
 - テンプレートエンジン(thymeleaf)
+- データベース(SQLiteを使用、サーバーレスのデータベースエンジン)
 - TypeScript
 - BootStrap
-- 単体テスト
+- node.js
+- webpack
 - もちろんHTML、CSS、JavaScriptも
+- 他のフレームワークもgradleやpackage.jsonに追加すれば利用可能になるでしょう
 
 ## 目次
 
@@ -90,13 +93,13 @@
     このプラグインは、Google Translate API を使用して、ソースに記述されているコメントを翻訳します。  
     フレームワークの機能を理解するのに役立ちます。
 
-    ※ 設定 > 拡張機能 > Comment Translate > Target Language で "ja" を指定しておく。
+    ※ 設定 > 拡張機能 > Comment Translate > Target Language で "ja" を指定しておく(このプロジェクトでは設定済み)
 
 - Google Translate
 
     Google Translate API を使用してコードを翻訳します。
     こちらは選択文字列をCtrl+Shift+Tで翻訳してくれます。  
-    ※ 設定 > 拡張機能 > Google Translate > Google Translate Ext: Languages で "ja" を追加。
+    ※ 設定 > 拡張機能 > Google Translate > Google Translate Ext: Languages で "ja" を追加(このプロジェクトでは設定済み)
 
 ## 実行方法  <a name="howtorun"></a>
 
@@ -147,11 +150,16 @@
 BootStrapのドキュメントは以下を参照してください。  
 [getbootstrap](https://getbootstrap.jp/docs/5.3/getting-started/introduction/)
 
+### Hot Reload について
+
+すべてのフレームワークがHot Reloadに対応しているわけではありません。  
+その場合、一度サーバーを停止して起動する必要があります(再起動より確実)
+
 ## TODO <a name="todo"></a>
 
 このあたりも対応したいですね。
 
-- [ ] sass対応
-- [ ] vue対応
-- [ ] gulp対応
+- [ ] sass
+- [ ] vue.js
+- [ ] gulp
 - [ ] TypeScriptの単体テスト

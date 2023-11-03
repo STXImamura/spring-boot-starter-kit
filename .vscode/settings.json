@@ -1,4 +1,8 @@
 {
+    "googleTranslateExt.languages": [
+        "ja"
+    ],
+    "commentTranslate.targetLanguage": "ja",
     "java.configuration.updateBuildConfiguration": "interactive",
     "java.debug.settings.onBuildFailureProceed": true,
     "java.compile.nullAnalysis.mode": "automatic"
