@@ -30,6 +30,8 @@ repositories {
 	mavenCentral()
 }
 
+// npm_installは1回だけやればいいので、時間がかかるようなら外してよい
+// ターミナルで`npm install`すればよい
 classes.dependsOn npm_install
 classes.dependsOn npm_run_build
 classes.dependsOn npm_run_webpack

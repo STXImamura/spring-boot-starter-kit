@@ -1,31 +1,40 @@
 # Spring Boot Starter Kit
-てっとり早くSpring Bootを学習したい人のための環境構築済みのプロジェクトです。  
-以下のモジュールが含まれています。
+てっとり早くWeb開発を学習したい人のための環境構築済みのプロジェクトです。  
+プログラミングを学習したい人にとって、まず環境構築がハードルになってしまうことが多いことでしょう。  
+このプロジェクトはフロントエンドからバックエンド(サーバーサイド)まで学べるように、  
+以下の機能を学習するための環境が構築されています。
 
-以下の機能が学べます
-- spring boot 
-- 単体テスト(Java)
-- テンプレートエンジン(thymeleaf)
-- データベース(SQLiteを使用、サーバーレスのデータベースエンジン)
-- TypeScript
-- BootStrap
-- node.js
-- webpack
-- もちろんHTML、CSS、JavaScriptも
-- 他のフレームワークもgradleやpackage.jsonに追加すれば利用可能になるでしょう
+- バックエンド開発
+  - Java
+  - spring boot (Java フレームワーク)
+  - gradle (ビルド、依存関係管理)
+  - 単体テスト(Java用)
+  - テンプレートエンジン(thymeleaf)
+  - データベース(SQLiteを使用、サーバーレスのデータベースエンジン)
+
+- フロントエンド開発
+  - TypeScript (JavaScriptの上位言語)
+  - BootStrap (CSSフレームワーク)
+  - node.js (JavaScriptパッケージ管理)
+  - webpack (JavaScriptやCSSをまとめるツール)
+  - もちろんHTML、CSS、JavaScriptも
+
+- 後から追加したいものがあれば、gradleやnpmで追加できると思います
 
 ## 目次
 
 - [インストール](#install)
 - [VSCode拡張機能](#vscode)
+  - 便利な拡張機能
 - [実行方法](#howtorun)
 - [確認方法](#confirm)
 - [単体テスト](#test)
 - [ディレクトリ/ファイル構成について](#dir)
 - [その他](#other)
   - TypeScriptの自動コンパイル
+  - BootStrap ドキュメント
+  - Hot Reload について
 - [TODO](#todo)
-
 
 ## インストール <a name="install"></a>
 以下のツールを各サイトからダウンロードしてインストールしてください。
@@ -55,8 +64,10 @@
     ※ 64bit版 Windows Installerを選択
 
 - A5:SQL Mk-2
-    A5:SQL Mk-2は複雑化するデータベース開発を支援するために開発されたフリーのSQLクライアントです。  
-    SQLを実行したり、テーブルを編集するほかに、SQLの実行計画を取得したり、ER図を作成したりすることが出来ます。
+
+    複雑化するデータベース開発を支援するために開発されたフリーのSQLクライアントです。  
+    SQLを実行したり、テーブルを編集するほかに、SQLの実行計画を取得したり、ER図を作成したりすることが出来ます。  
+    SQLiteが使えるのであれば他の代替ツールでも構いません(VSCode拡張でも出来る)  
 
     https://a5m2.mmatsubara.com/
 
@@ -82,6 +93,7 @@
     Gradle プロジェクトを管理し、Gradle タスクを実行します。
 
 ### 便利な拡張機能
+
 - Comment Translate
 
     このプラグインは、Google Translate API を使用して、ソースに記述されているコメントを翻訳します。  
@@ -105,6 +117,7 @@
 
 ## 実行方法  <a name="howtorun"></a>
 
+VSCodeを起動し、ファイル > フォルダーを開く で、このプロジェクトのあるフォルダを開きます。  
 アクティビティバーから「Gradle」を選択してサイドバーを切り替えます。  
 切り替えたらdemo > Tasks > application > bootRun から DebugTask を実行します。
 
@@ -156,13 +169,16 @@ BootStrapのドキュメントは以下を参照してください。
 ### Hot Reload について
 
 すべてのフレームワークがHot Reloadに対応しているわけではありません。  
-その場合、一度サーバーを停止して起動する必要があります(再起動より確実)
+(モジュールを追加すれば出来るものもある)  
+その場合、一度サーバーを停止して起動する必要があります(再起動はイマイチ？)
 
 ## TODO <a name="todo"></a>
 
-このあたりも対応したいですね。
+以下も追加したいですね。
 
-- [ ] sass
-- [ ] vue.js
-- [ ] gulp
-- [ ] TypeScriptの単体テスト
+- sass (cssの拡張言語)
+- vue.js (フロントエンドフレームワーク)
+- gulp (JavaScriptを圧縮したり、難読化したりするツール)
+- jest (JavaScriptの単体テストツール)
+- cypress (ブラウザの自動テストツール)
+- その他のDB (MySQL/PostgreSQL)
