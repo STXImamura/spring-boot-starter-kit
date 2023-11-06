@@ -47,16 +47,10 @@
 
 - npm
 
-    JavaScriptベースのプロジェクトで使用されるパッケージ管理システムです。npmを使用することで、他の開発者が共有しているJavaScriptライブラリやツールをプロジェクトに追加することができます。
+    JavaScriptベースのプロジェクトで使用されるパッケージ管理システムです。npmを使用することで、  
+    他の開発者が共有しているJavaScriptライブラリやツールをプロジェクトに追加することができます。
 
     https://nodejs.org/en/download
-
-    npmをインストールしたら、コマンドプロンプトを開いて以下のコマンドを実行してください。  
-    TypeScriptをインストールします。
-
-    ```bash
-    npm install -g typescript
-    ```
 
     ※ 64bit版 Windows Installerを選択
 
@@ -101,16 +95,25 @@
     こちらは選択文字列をCtrl+Shift+Tで翻訳してくれます。  
     ※ 設定 > 拡張機能 > Google Translate > Google Translate Ext: Languages で "ja" を追加(このプロジェクトでは設定済み)
 
+- ESLint
+
+    ESLint はコードを静的に分析して問題を迅速に発見します。
+
+- Prettier Formatter
+
+    コードフォーマッタです。コードを解析し、行の最大長を考慮した独自のルールで再出力し、必要に応じてコードを折り返すことで、一貫したスタイルを強制します。
+
 ## 実行方法  <a name="howtorun"></a>
 
-アクティビティバーからGradleを選択してサイドバーを切り替えます。  
+アクティビティバーから「Gradle」を選択してサイドバーを切り替えます。  
 切り替えたらdemo > Tasks > application > bootRun から DebugTask を実行します。
 
 ![実行方法](images/springboot_debug.png)
 
 ## 確認方法  <a name="confirm"></a>
 
-ブラウザで http://localhost:8080/hello を開いて、「Hello World!」と表示されれば成功です。
+ブラウザで http://localhost:8080/hello を開いて、「Hello World!」と表示されれば成功です。  
+または、サイドバーから「実行でデバッグ」を選んで、Launch Chromeでも確認できます。
 
 ## 単体テスト <a name="test"></a>
 
@@ -121,22 +124,22 @@
 
 ## ディレクトリ/ファイル構成について <a name="dir"></a>
 
-| ディレクトリ             | 説明                              |
-|--------------------------|-----------------------------------|
-| build                    | src配下のbuild結果を格納する場所  |
-| src                      | ルート                            |
-| src/main                 | 各種ソースの格納先                |
-| src/main/java            | Javaソースコード                  |
-| src/main/resources       | 様々なリソースを置く場所          |
-| src/main/resources/static| 静的コンテンツ<br/> 画像ファイル/CSS/JavaScriptなどはここに配置します。  |
-| src/main/resources/templates| thymeleafのテンプレート        |
-| src/ts                   | TypeScriptのソースコード<br/>BuildするとJavaScriptにコンパイルされ、staticディレクトリに配置されます。 |
-| src/test                 | テストコードの格納先              |
-| src/inex.js              | webpackがまとめるファイル         |
-| build.gradle             | gradleのbuildスクリプト           |
-| package.json             | node.jsのプロジェクト設定ファイル |
-| tsconfig.json            | TypeScriptの設定ファイル          |
-| webpack.config.js        | webpackの定義ファイル             |
+| ディレクトリ                 | 説明                              |
+|------------------------------|-----------------------------------|
+| build                        | src配下のbuild結果を格納する場所  |
+| src                          | ルート                            |
+| src/main                     | 各種ソースの格納先                |
+| src/main/java                | Javaソースコード                  |
+| src/main/resources           | 様々なリソースを置く場所          |
+| src/main/resources/static    | 静的コンテンツ<br/> 画像ファイル/CSS/JavaScriptなどはここに配置します。  |
+| src/main/resources/templates | thymeleafのテンプレート           |
+| src/ts                       | TypeScriptのソースコード<br/>BuildするとJavaScriptにコンパイルされ、staticディレクトリに配置されます。 |
+| src/test                     | テストコードの格納先              |
+| src/inex.js                  | webpackがまとめるファイル         |
+| build.gradle                 | gradleのbuildスクリプト           |
+| package.json                 | node.jsのプロジェクト設定ファイル |
+| tsconfig.json                | TypeScriptの設定ファイル          |
+| webpack.config.js            | webpackの定義ファイル             |
 
 ## その他 <a name="other"></a>
 
