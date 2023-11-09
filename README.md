@@ -43,7 +43,8 @@
 
     Javaの開発キットです。
 
-    https://www.oracle.com/jp/java/technologies/downloads/  
+    https://www.oracle.com/jp/java/technologies/downloads/
+    ※ 古いJavaがインストールされている場合は注意してください。事前にアンインストールや環境変数の削除が必要になるかと思います。
     ※ JDK17、Windowsを選択
     ※ 環境変数の設定もやってくれるので、zip版よりexe/msi版の方が楽でしょう。
 
